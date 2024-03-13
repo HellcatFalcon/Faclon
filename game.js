@@ -27,6 +27,7 @@ var cursors;
 var Score = 0;
 var gameOver = false;
 var ScoreText;
+var lifeLine = 5;
 function preload() {
     // Load assets
     //#region layers
@@ -189,7 +190,8 @@ lifeText = this.add.text(1500, 100, showLife(), { fontSize: '40px', fill: '#FFF'
 .setScrollFactor(0)
 
 //LifeLine
-function showLife() {
+{
+    function showLife() {
     var lifeLine = ''
 
     
