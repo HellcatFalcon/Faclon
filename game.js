@@ -28,6 +28,7 @@ var Score = 0;
 var gameOver = false;
 var ScoreText;
 var star;
+var lifeLine = 5;
 function preload() {
     // Load assets
     //#region layers
@@ -163,7 +164,7 @@ for (var x = 0; x < worldWidth; x = x + Phaser.Math.Between(256,500)){
     }
     platforms.create(x + 128 * i,y, 'skyGroundEnd')
 let score = 0;
-//Функція котра допомагає збільшити рахуйнок
+//Функція котра допомагає збільшити рахунок
 function collectStar() {
     score++
     
@@ -181,12 +182,26 @@ window.onload = function() {
     document.getElementById("starButton").addEventListener("click", collectStar);
 };
 //Зірка
-let starImage = document.getElementById("starImage");
+let starImage = document.getElementById("star.png");
 starImage.style.display = "block";
 //Відображення зірки
 starImage.style.position = "absolute";
 //Встановлення позиції
 starImage.style.top = "100px";
 starImage.style.left = "100px";
+//Lives
+lifeText = this.add.text(1500, 100, showLife(), { fontSize: '40px', fill: '#FFF'})
+.setOrigin(0,0)
+.setScrollFactor(0)
+
+//LifeLine
+function showLife() {
+    var lifeLine = ''
+
+    fore (var i = 0; i < life; i++) {
+        lifeLine = lifeLine + '❤️'
+    }
+}
+
 
 }
