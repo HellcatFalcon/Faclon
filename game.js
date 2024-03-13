@@ -27,8 +27,6 @@ var cursors;
 var Score = 0;
 var gameOver = false;
 var ScoreText;
-var star;
-var lifeLine = 5;
 function preload() {
     // Load assets
     //#region layers
@@ -140,10 +138,6 @@ function spawnBomb() {
 function defeatEnemy(bomb, enemy) {
 
     enemy.disableBody(true, true);
-
-    Score += 1;
-    ScoreText.setText('Score: ' + Score);
-
 }
 
 function hitDrone (player, drone) {
@@ -155,7 +149,7 @@ function hitDrone (player, drone) {
     gameOver = true;
 }
 
-for (var x = 0; x < worldWidth; x = x + Phaser.Math.Between(256,500)){
+for (var x = 0; x < worldWidth; x = x + Phaser.Math.Between(256,500))
     var y = Phaser.Math.Between(128,810)
 
     platforms.create(x,y, 'skyGroundStart')
@@ -198,10 +192,29 @@ lifeText = this.add.text(1500, 100, showLife(), { fontSize: '40px', fill: '#FFF'
 function showLife() {
     var lifeLine = ''
 
-    fore (var i = 0; i < life; i++) {
+    
         lifeLine = lifeLine + '❤️'
     }
 }
+// Texture of bombs
+function hitBomb(player, bomb) {
+    bomb.disableBody(true, true)
 
+    player.setTint(0xff0000)
+    life =-1
+    lifeText.setText(showlife())
+    
+    console.log('boom')
+    player.anims.play('turn');
 
+    if (kife == 0) gameOver = true;
+
+}
+{
+    //Game restart
+    function refreshBody() {
+        console.log('game over')
+        location,reload()
+
+    }
 }
