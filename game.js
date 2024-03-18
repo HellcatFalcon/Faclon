@@ -174,10 +174,10 @@ function updateScore() {
 window.onload = function() {
     updateScore();
 
-    document.getElementById("starButton").addEventListener("click", collectStar);
+    document.getElementById("assets/star.png").addEventListener("click", collectStar);
 };
 //Зірка
-let starImage = document.getElementById("star.png");
+let starImage = document.getElementById("assets/star.png");
 starImage.style.display = "block";
 //Відображення зірки
 starImage.style.position = "absolute";
@@ -220,3 +220,25 @@ function hitBomb(player, bomb) {
 
     }
 }
+{
+document.addEventListener('assets/drone.png', function()
+const enemy = 
+document.querySelector('assets/enemy1.png');
+constgameHeight = 
+document.queryElement.clientHeight;
+
+functionmoveEnemy() {
+    let position = 0;
+    const speed = 2;
+
+    const moveInterval = setInterval (function() {
+        if (position >= gameHeight) {
+            clearInterval (moveInterval);
+
+            enemy.style.display =
+
+        }else
+        
+    })
+}
+)}
