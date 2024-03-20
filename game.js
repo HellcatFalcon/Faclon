@@ -190,55 +190,13 @@ lifeText = this.add.text(1500, 100, showLife(), { fontSize: '40px', fill: '#FFF'
 .setScrollFactor(0)
 
 //LifeLine
-{
-    function showLife() {
-    var lifeLine = ''
+lifeText = this.add.text(1500, 50,showTextSymbols('💖', life), { fontSize: '40px', fill: '#FFF'});
+setOrigin(0,0)
+.setScrollFactor(0)
 
-    
-        lifeLine = lifeLine + '❤️'
-    }
-}
-// Texture of bombs
-function hitBomb(player, bomb) {
-    bomb.disableBody(true, true)
+enemy.children.iterate(function (child) {
+    child
 
-    player.setTint(0xff0000)
-    life =-1
-    lifeText.setText(showlife())
-    
-    console.log('boom')
-    player.anims.play('turn');
-
-    if (kife == 0) gameOver = true;
-
-}
-{
-    //Game restart
-    function refreshBody() {
-        console.log('game over')
-        location,reload()
-
-    }
-}
-{
-document.addEventListener('assets/drone.png', function()
-const enemy = 
-document.querySelector('assets/enemy1.png');
-constgameHeight = 
-document.queryElement.clientHeight;
-
-functionmoveEnemy() {
-    let position = 0;
-    const speed = 2;
-
-    const moveInterval = setInterval (function() {
-        if (position >= gameHeight) {
-            clearInterval (moveInterval);
-
-            enemy.style.display =
-
-        }else
-        
-    })
-}
-)}
+    .setCollideWorldBounds(true)
+    .setVelocityX(Phaser.Math.FloatBetween(-500, 500))
+})
