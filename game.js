@@ -37,6 +37,7 @@ function preload() {
     this.load.image('layer4', 'assets/background/layer-4.png');
     //#endregion
     this.load.image('platform', 'assets/platform.png')
+    this.load.image('bomb', 'assets/star.png')
     this.load.image('drone', 'assets/drone.png')
     this.load.image('bomb', 'assets/bomb.png')
     this.load.spritesheet('Car5',
@@ -200,3 +201,4 @@ enemy.children.iterate(function (child) {
     .setCollideWorldBounds(true)
     .setVelocityX(Phaser.Math.FloatBetween(-500, 500))
 })
+class Enemy 
