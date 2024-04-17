@@ -201,4 +201,4 @@ enemy.children.iterate(function (child) {
     .setCollideWorldBounds(true)
     .setVelocityX(Phaser.Math.FloatBetween(-500, 500))
 })
-class Enemy 
+
